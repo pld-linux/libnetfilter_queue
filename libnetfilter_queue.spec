@@ -1,5 +1,5 @@
 Summary:	netfilter userspace packet queueing library
-Summary(pl):	Biblioteka kolejkowania pakietÛw w przestrzeni uøytkownika dla netfiltra
+Summary(pl.UTF-8):   Biblioteka kolejkowania pakiet√≥w w przestrzeni u≈ºytkownika dla netfiltra
 Name:		libnetfilter_queue
 Version:	0.0.13
 Release:	1
@@ -20,15 +20,15 @@ libnetfilter_queue is a userspace library providing an API to packets
 that have been queued by the kernel packet filter. It is is part of a
 system that deprecates the old ip_queue/libipq mechanism.
 
-%description -l pl
-libnetfilter_queue to biblioteka przestrzeni uøytkownika
-udostÍpniaj±ca API do pakietÛw kolejkowanych przez filtr pakietÛw w
-j±drze. Jest czÍ∂ci± systemu zastÍpuj±cego stary mechanizm
+%description -l pl.UTF-8
+libnetfilter_queue to biblioteka przestrzeni u≈ºytkownika
+udostƒôpniajƒÖca API do pakiet√≥w kolejkowanych przez filtr pakiet√≥w w
+jƒÖdrze. Jest czƒô≈õciƒÖ systemu zastƒôpujƒÖcego stary mechanizm
 ip_queue/libipq.
 
 %package devel
 Summary:	Header files for libnetfilter_queue library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libnetfilter_queue
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libnetfilter_queue
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libnfnetlink-devel >= 0.0.16
@@ -36,19 +36,19 @@ Requires:	libnfnetlink-devel >= 0.0.16
 %description devel
 Header files for libnetfilter_queue library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libnetfilter_queue.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libnetfilter_queue.
 
 %package static
 Summary:	Static libnetfilter_queue library
-Summary(pl):	Statyczna biblioteka libnetfilter_queue
+Summary(pl.UTF-8):   Statyczna biblioteka libnetfilter_queue
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libnetfilter_queue library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libnetfilter_queue.
 
 %prep
