@@ -1,5 +1,5 @@
 Summary:	netfilter userspace packet queueing library
-Summary(pl.UTF-8):   Biblioteka kolejkowania pakietów w przestrzeni użytkownika dla netfiltra
+Summary(pl.UTF-8):	Biblioteka kolejkowania pakietów w przestrzeni użytkownika dla netfiltra
 Name:		libnetfilter_queue
 Version:	0.0.13
 Release:	1
@@ -28,7 +28,7 @@ ip_queue/libipq.
 
 %package devel
 Summary:	Header files for libnetfilter_queue library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libnetfilter_queue
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libnetfilter_queue
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libnfnetlink-devel >= 0.0.16
@@ -41,7 +41,7 @@ Pliki nagłówkowe biblioteki libnetfilter_queue.
 
 %package static
 Summary:	Static libnetfilter_queue library
-Summary(pl.UTF-8):   Statyczna biblioteka libnetfilter_queue
+Summary(pl.UTF-8):	Statyczna biblioteka libnetfilter_queue
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
