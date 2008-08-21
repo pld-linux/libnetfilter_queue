@@ -32,7 +32,7 @@ Summary:	Header files for libnetfilter_queue library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libnetfilter_queue
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libnfnetlink-devel >= 0.0.16
+Requires:	libnfnetlink-devel >= 0.0.38
 
 %description devel
 Header files for libnetfilter_queue library.
