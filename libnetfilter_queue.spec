@@ -1,16 +1,16 @@
 Summary:	netfilter userspace packet queueing library
 Summary(pl.UTF-8):	Biblioteka kolejkowania pakietów w przestrzeni użytkownika dla netfiltra
 Name:		libnetfilter_queue
-Version:	0.0.16
+Version:	0.0.17
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://www.netfilter.org/projects/libnetfilter_queue/files/%{name}-%{version}.tar.bz2
-# Source0-md5:	b36664e6cd39edbfe46b416a86118add
+# Source0-md5:	2cde35e678ead3a8f9eb896bf807a159
 URL:		http://www.netfilter.org/projects/libnetfilter_queue/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libnfnetlink-devel >= 0.0.38
+BuildRequires:	libnfnetlink-devel >= 0.0.41
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.9.0
 Requires:	libnfnetlink >= 0.0.38
