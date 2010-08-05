@@ -1,19 +1,19 @@
 Summary:	netfilter userspace packet queueing library
 Summary(pl.UTF-8):	Biblioteka kolejkowania pakietów w przestrzeni użytkownika dla netfiltra
 Name:		libnetfilter_queue
-Version:	0.0.17
+Version:	1.0.0
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://www.netfilter.org/projects/libnetfilter_queue/files/%{name}-%{version}.tar.bz2
-# Source0-md5:	2cde35e678ead3a8f9eb896bf807a159
+# Source0-md5:	af6a9ea350f63a13609bc3b47b5c395c
 URL:		http://www.netfilter.org/projects/libnetfilter_queue/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libnfnetlink-devel >= 0.0.41
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.9.0
-Requires:	libnfnetlink >= 0.0.38
+Requires:	libnfnetlink >= 0.0.41
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +32,7 @@ Summary:	Header files for libnetfilter_queue library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libnetfilter_queue
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libnfnetlink-devel >= 0.0.38
+Requires:	libnfnetlink-devel >= 0.0.41
 
 %description devel
 Header files for libnetfilter_queue library.
@@ -78,20 +78,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libnetfilter_queue.so.*.*.*
-%attr(755,root,root) %{_libdir}/libnetfilter_queue_libipq.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libnetfilter_queue.so.1
-%attr(755,root,root) %ghost %{_libdir}/libnetfilter_queue_libipq.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libnetfilter_queue.so
-%attr(755,root,root) %{_libdir}/libnetfilter_queue_libipq.so
 %{_libdir}/libnetfilter_queue.la
-%{_libdir}/libnetfilter_queue_libipq.la
 %{_includedir}/libnetfilter_queue
 %{_pkgconfigdir}/libnetfilter_queue.pc
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libnetfilter_queue.a
-%{_libdir}/libnetfilter_queue_libipq.a
