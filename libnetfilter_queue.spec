@@ -1,18 +1,20 @@
 Summary:	netfilter userspace packet queueing library
 Summary(pl.UTF-8):	Biblioteka kolejkowania pakietów w przestrzeni użytkownika dla netfiltra
 Name:		libnetfilter_queue
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://www.netfilter.org/projects/libnetfilter_queue/files/%{name}-%{version}.tar.bz2
-# Source0-md5:	08b968cb2d36c24deb7f26a69f5d8602
+# Source0-md5:	df09befac35cb215865b39a36c96a3fa
 URL:		http://www.netfilter.org/projects/libnetfilter_queue/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.6
+BuildRequires:	libmnl-devel >= 1.0.3
 BuildRequires:	libnfnetlink-devel >= 0.0.41
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.9.0
+Requires:	libmnl >= 1.0.3
 Requires:	libnfnetlink >= 0.0.41
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,6 +34,7 @@ Summary:	Header files for libnetfilter_queue library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libnetfilter_queue
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libmnl-devel >= 1.0.3
 Requires:	libnfnetlink-devel >= 0.0.41
 
 %description devel
@@ -57,7 +60,7 @@ Statyczna biblioteka libnetfilter_queue.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure \
@@ -70,6 +73,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# this shouldn't be installed (and not in this place)
+%{__rm} $RPM_BUILD_ROOT%{_includedir}/internal.h
 
 %clean
 rm -rf $RPM_BUILD_ROOT
